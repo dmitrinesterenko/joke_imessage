@@ -1,0 +1,485 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A2F674D21B47A2400F65B9C /* JokesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A785ED921B338C8004C9BA3 /* JokesCollectionViewController.swift */; };
+		0A3F906A218E0BD3004EAF65 /* Jokes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3F9069218E0BD3004EAF65 /* Jokes.swift */; };
+		0A785ED821B335C6004C9BA3 /* JokeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A785ED721B335C6004C9BA3 /* JokeViewCell.swift */; };
+		0ABC78EF218654DB00377B5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ABC78EE218654DB00377B5A /* Assets.xcassets */; };
+		0ABC78F6218654DC00377B5A /* Joke MessagesExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0ABC78F5218654DC00377B5A /* Joke MessagesExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0ABC78FB218654DC00377B5A /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ABC78FA218654DC00377B5A /* Messages.framework */; };
+		0ABC78FE218654DC00377B5A /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABC78FD218654DC00377B5A /* MessagesViewController.swift */; };
+		0ABC7901218654DC00377B5A /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ABC78FF218654DC00377B5A /* MainInterface.storyboard */; };
+		0ABC7903218654DC00377B5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ABC7902218654DC00377B5A /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0ABC78F7218654DC00377B5A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0ABC78E5218654DB00377B5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0ABC78F4218654DC00377B5A;
+			remoteInfo = "Joke MessagesExtension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0ABC790A218654DC00377B5A /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0ABC78F6218654DC00377B5A /* Joke MessagesExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0A3F9069218E0BD3004EAF65 /* Jokes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jokes.swift; sourceTree = "<group>"; };
+		0A785ED721B335C6004C9BA3 /* JokeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeViewCell.swift; sourceTree = "<group>"; };
+		0A785ED921B338C8004C9BA3 /* JokesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesCollectionViewController.swift; sourceTree = "<group>"; };
+		0ABC78EB218654DB00377B5A /* Joke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Joke.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0ABC78EE218654DB00377B5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0ABC78F0218654DB00377B5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0ABC78F5218654DC00377B5A /* Joke MessagesExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Joke MessagesExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0ABC78FA218654DC00377B5A /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
+		0ABC78FD218654DC00377B5A /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		0ABC7900218654DC00377B5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		0ABC7902218654DC00377B5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0ABC7904218654DC00377B5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0ABC78F2218654DC00377B5A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0ABC78FB218654DC00377B5A /* Messages.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A3F9068218E0B85004EAF65 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0A3F9069218E0BD3004EAF65 /* Jokes.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0A785ED621B335AA004C9BA3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0A785ED721B335C6004C9BA3 /* JokeViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0ABC78E4218654DB00377B5A = {
+			isa = PBXGroup;
+			children = (
+				0ABC78ED218654DB00377B5A /* Joke */,
+				0ABC78FC218654DC00377B5A /* Joke MessagesExtension */,
+				0ABC78F9218654DC00377B5A /* Frameworks */,
+				0ABC78EC218654DB00377B5A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0ABC78EC218654DB00377B5A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0ABC78EB218654DB00377B5A /* Joke.app */,
+				0ABC78F5218654DC00377B5A /* Joke MessagesExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0ABC78ED218654DB00377B5A /* Joke */ = {
+			isa = PBXGroup;
+			children = (
+				0ABC78EE218654DB00377B5A /* Assets.xcassets */,
+				0ABC78F0218654DB00377B5A /* Info.plist */,
+			);
+			path = Joke;
+			sourceTree = "<group>";
+		};
+		0ABC78F9218654DC00377B5A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0ABC78FA218654DC00377B5A /* Messages.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0ABC78FC218654DC00377B5A /* Joke MessagesExtension */ = {
+			isa = PBXGroup;
+			children = (
+				0A785ED621B335AA004C9BA3 /* Views */,
+				0A3F9068218E0B85004EAF65 /* Models */,
+				0ABC78FD218654DC00377B5A /* MessagesViewController.swift */,
+				0A785ED921B338C8004C9BA3 /* JokesCollectionViewController.swift */,
+				0ABC78FF218654DC00377B5A /* MainInterface.storyboard */,
+				0ABC7902218654DC00377B5A /* Assets.xcassets */,
+				0ABC7904218654DC00377B5A /* Info.plist */,
+			);
+			path = "Joke MessagesExtension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0ABC78EA218654DB00377B5A /* Joke */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0ABC790B218654DC00377B5A /* Build configuration list for PBXNativeTarget "Joke" */;
+			buildPhases = (
+				0ABC78E9218654DB00377B5A /* Resources */,
+				0ABC790A218654DC00377B5A /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0ABC78F8218654DC00377B5A /* PBXTargetDependency */,
+			);
+			name = Joke;
+			productName = Joke;
+			productReference = 0ABC78EB218654DB00377B5A /* Joke.app */;
+			productType = "com.apple.product-type.application.messages";
+		};
+		0ABC78F4218654DC00377B5A /* Joke MessagesExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0ABC7907218654DC00377B5A /* Build configuration list for PBXNativeTarget "Joke MessagesExtension" */;
+			buildPhases = (
+				0ABC78F1218654DC00377B5A /* Sources */,
+				0ABC78F2218654DC00377B5A /* Frameworks */,
+				0ABC78F3218654DC00377B5A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Joke MessagesExtension";
+			productName = "Joke MessagesExtension";
+			productReference = 0ABC78F5218654DC00377B5A /* Joke MessagesExtension.appex */;
+			productType = "com.apple.product-type.app-extension.messages";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0ABC78E5218654DB00377B5A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = Pronounce;
+				TargetAttributes = {
+					0ABC78EA218654DB00377B5A = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					0ABC78F4218654DC00377B5A = {
+						CreatedOnToolsVersion = 10.0;
+					};
+				};
+			};
+			buildConfigurationList = 0ABC78E8218654DB00377B5A /* Build configuration list for PBXProject "Joke" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0ABC78E4218654DB00377B5A;
+			productRefGroup = 0ABC78EC218654DB00377B5A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0ABC78EA218654DB00377B5A /* Joke */,
+				0ABC78F4218654DC00377B5A /* Joke MessagesExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0ABC78E9218654DB00377B5A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0ABC78EF218654DB00377B5A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0ABC78F3218654DC00377B5A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0ABC7903218654DC00377B5A /* Assets.xcassets in Resources */,
+				0ABC7901218654DC00377B5A /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0ABC78F1218654DC00377B5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A785ED821B335C6004C9BA3 /* JokeViewCell.swift in Sources */,
+				0ABC78FE218654DC00377B5A /* MessagesViewController.swift in Sources */,
+				0A3F906A218E0BD3004EAF65 /* Jokes.swift in Sources */,
+				0A2F674D21B47A2400F65B9C /* JokesCollectionViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0ABC78F8218654DC00377B5A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0ABC78F4218654DC00377B5A /* Joke MessagesExtension */;
+			targetProxy = 0ABC78F7218654DC00377B5A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0ABC78FF218654DC00377B5A /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0ABC7900218654DC00377B5A /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0ABC7905218654DC00377B5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0ABC7906218654DC00377B5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0ABC7908218654DC00377B5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P3N336UV5L;
+				INFOPLIST_FILE = "Joke MessagesExtension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = area55.Joke.MessagesExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0ABC7909218654DC00377B5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P3N336UV5L;
+				INFOPLIST_FILE = "Joke MessagesExtension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = area55.Joke.MessagesExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0ABC790C218654DC00377B5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P3N336UV5L;
+				INFOPLIST_FILE = Joke/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = area55.Joke;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0ABC790D218654DC00377B5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P3N336UV5L;
+				INFOPLIST_FILE = Joke/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = area55.Joke;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0ABC78E8218654DB00377B5A /* Build configuration list for PBXProject "Joke" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0ABC7905218654DC00377B5A /* Debug */,
+				0ABC7906218654DC00377B5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0ABC7907218654DC00377B5A /* Build configuration list for PBXNativeTarget "Joke MessagesExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0ABC7908218654DC00377B5A /* Debug */,
+				0ABC7909218654DC00377B5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0ABC790B218654DC00377B5A /* Build configuration list for PBXNativeTarget "Joke" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0ABC790C218654DC00377B5A /* Debug */,
+				0ABC790D218654DC00377B5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0ABC78E5218654DB00377B5A /* Project object */;
+}
