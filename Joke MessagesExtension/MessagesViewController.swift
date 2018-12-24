@@ -11,6 +11,8 @@ import Messages
 
 class MessagesViewController: MSMessagesAppViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
+    var jokesCollectionViewController: JokesCollectionViewController!
+    
     @IBOutlet weak var jokeCollectionView: UICollectionView!
     let reuseIdentifier = "cell"
     
@@ -18,9 +20,16 @@ class MessagesViewController: MSMessagesAppViewController, UICollectionViewDataS
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        jokesCollectionViewController = UIStoryboard(name: "MainInterface", bundle: nil).instantiateViewController(withIdentifier: "JokesCollectionViewController") as? JokesCollectionViewController
         // Do any additional setup after loading the view.
         
-        jokes.getJokes(updateUI: bindData)
+        //jokes.getJokes(updateUI: bindData)
+        //TODO load the JokesCollectionViewController
+    }
+    
+    override func viewDidAppear(_ animated: Bool){
+        super.viewDidAppear(false)
+        self.present(jokesCollectionViewController, animated: true, completion: nil)
     }
     
     private func bindData(){

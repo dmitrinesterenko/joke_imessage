@@ -19,6 +19,10 @@ class JokesCollectionViewController: UICollectionViewController{
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool){
+        super.viewDidAppear(false)
         jokes.getJokes(updateUI: bindData)
     }
     
@@ -35,8 +39,8 @@ class JokesCollectionViewController: UICollectionViewController{
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) ->UICollectionViewCell{
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as! JokeViewCell
         let item = self.jokes.jokes[indexPath.item]
-        
-        cell.jokeText.text = String(format: "%.2f", item)
+        cell.jokeText = UILabel()
+        cell.jokeText.text = String(format: "%s", item)
         
         
         
