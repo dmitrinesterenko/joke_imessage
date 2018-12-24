@@ -14,9 +14,6 @@
                 <viewController id="ObA-dk-sSI" customClass="MessagesViewController" customModule="Joke_MessagesExtension" customModuleProvider="target" sceneMemberID="viewController">
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="528"/>
-                    <connections>
-                        <outlet property="jokeCollectionView" destination="Kgk-nm-phF" id="6Te-FN-mb5"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X47-rx-isc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -25,7 +22,7 @@
         <!--Jokes Collection View Controller-->
         <scene sceneID="LHE-mQ-rdz">
             <objects>
-                <collectionViewController storyboardIdentifier="JokesCollectionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fyl-p2-kqo" customClass="JokesCollectionViewController" customModule="Joke_MessagesExtension" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="JokesCollectionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fyl-p2-kqo" customClass="JokesCollectionViewController" customModule="Joke_MessagesExtension" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="JUh-as-yJA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -53,6 +50,9 @@
                                         </label>
                                     </subviews>
                                 </view>
+                                <connections>
+                                    <outlet property="jokeText" destination="Htm-gj-mTO" id="UQ8-T3-c8A"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -60,6 +60,10 @@
                             <outlet property="delegate" destination="fyl-p2-kqo" id="MKr-hW-QLl"/>
                         </connections>
                     </collectionView>
+                    <connections>
+                        <outlet property="jokeCollectionView" destination="JUh-as-yJA" id="mEL-q5-wUy"/>
+                        <outletCollection property="jokeCollectionView" destination="JUh-as-yJA" collectionClass="NSMutableArray" id="vgz-ga-s1f"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wy5-yp-x61" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Kgk-nm-phF">

@@ -8,6 +8,5 @@
 
 import UIKit
 class JokeViewCell: UICollectionViewCell{
-    var jokeText: UILabel!
-    
+    @IBOutlet weak var jokeText: UILabel!
 }

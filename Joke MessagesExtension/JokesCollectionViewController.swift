@@ -10,14 +10,18 @@ import Foundation
 import UIKit
 class JokesCollectionViewController: UICollectionViewController{
     
-    @IBOutlet weak var jokeCollectionView: UICollectionView!
+    @IBOutlet var jokeCollectionView: UICollectionView!
+    //@IBOutlet weak var jokeCollectionView: UICollectionView!
+    
     let reuseIdentifier = "Joke Cell"
     
     let jokes = Jokes()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+//    self.jokeCollectionView.register(UINib(nibName: "JokesCollectionViewController", bundle: nil), forCellWithReuseIdentifier: "Joke Cell")
+//
+//        self.jokeCollectionView = UICollectionView()
         
     }
     
@@ -28,7 +32,10 @@ class JokesCollectionViewController: UICollectionViewController{
     
     private func bindData(){
         print(jokes.jokes)
-        jokeCollectionView.dataSource = jokes.jokes as? UICollectionViewDataSource
+        DispatchQueue.main.async{
+            self.jokeCollectionView.reloadData()
+        }
+        
     }
     // MARK: - UICollectionViewDataSource protocol
     
@@ -39,8 +46,7 @@ class JokesCollectionViewController: UICollectionViewController{
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) ->UICollectionViewCell{
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as! JokeViewCell
         let item = self.jokes.jokes[indexPath.item]
-        cell.jokeText = UILabel()
-        cell.jokeText.text = String(format: "%s", item)
+        cell.jokeText.text = item
         
         
         
