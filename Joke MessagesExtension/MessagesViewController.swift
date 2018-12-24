@@ -9,68 +9,19 @@
 import UIKit
 import Messages
 
-class MessagesViewController: MSMessagesAppViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class MessagesViewController: MSMessagesAppViewController {
 
     var jokesCollectionViewController: JokesCollectionViewController!
-    
-    @IBOutlet weak var jokeCollectionView: UICollectionView!
-    let reuseIdentifier = "cell"
-    
-    let jokes = Jokes()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         jokesCollectionViewController = UIStoryboard(name: "MainInterface", bundle: nil).instantiateViewController(withIdentifier: "JokesCollectionViewController") as? JokesCollectionViewController
-        // Do any additional setup after loading the view.
-        
-        //jokes.getJokes(updateUI: bindData)
-        //TODO load the JokesCollectionViewController
+
     }
     
     override func viewDidAppear(_ animated: Bool){
         super.viewDidAppear(false)
         self.present(jokesCollectionViewController, animated: true, completion: nil)
-    }
-    
-    private func bindData(){
-        print(jokes.jokes)
-        self.jokeCollectionView.reloadData()
-        self.jokeCollectionView.performBatchUpdates(nil, completion: {
-            (result) in
-            // ready
-        })
-        //jokeCollectionView.dataSource = jokes.jokes as? UICollectionViewDataSource
-    }
-    // MARK: - UICollectionViewDataSource protocol
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int)->Int{
-        return self.jokes.jokes.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) ->UICollectionViewCell{
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as! JokeViewCell
-        let item = self.jokes.jokes[indexPath.item]
-        
-        cell.jokeText.text = String(format: "%.2f", item)
-        
-        
-        
-        cell.layer.borderColor = UIColor.black.cgColor
-        cell.layer.borderWidth = 1
-        cell.layer.cornerRadius = 8
-        return cell
-    }
-    
-    // MARK: - UICollectionViewDelegate protocol
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath : IndexPath)
-    {
-        NSLog("You selected cell #\(indexPath.item)")
-        
-        
-        ///Set the individual item state so we can track what the user is up to across
-        ///all of the samples
-        jokeCollectionView.reloadItems(at: [indexPath] as [IndexPath])
-        
     }
     
    
