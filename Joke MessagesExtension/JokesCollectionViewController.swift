@@ -19,9 +19,6 @@ class JokesCollectionViewController: UICollectionViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//    self.jokeCollectionView.register(UINib(nibName: "JokesCollectionViewController", bundle: nil), forCellWithReuseIdentifier: "Joke Cell")
-//
-//        self.jokeCollectionView = UICollectionView()
         
     }
     
@@ -47,9 +44,7 @@ class JokesCollectionViewController: UICollectionViewController{
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as! JokeViewCell
         let item = self.jokes.jokes[indexPath.item]
         cell.jokeText.text = item
-        
-        
-        
+
         cell.layer.borderColor = UIColor.black.cgColor
         cell.layer.borderWidth = 1
         cell.layer.cornerRadius = 8
