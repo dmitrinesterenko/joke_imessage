@@ -8,13 +8,18 @@
 
 import Foundation
 import UIKit
+
+protocol JokesCollectionViewControllerDelegate: class {
+    func didSelectJokeItem(_ item: String)
+}
+
 class JokesCollectionViewController: UICollectionViewController{
     
     @IBOutlet var jokeCollectionView: UICollectionView!
-    //@IBOutlet weak var jokeCollectionView: UICollectionView!
+    
+    var delegate: JokesCollectionViewControllerDelegate?
     
     let reuseIdentifier = "Joke Cell"
-    
     let jokes = Jokes()
     
     override func viewDidLoad() {
@@ -55,11 +60,9 @@ class JokesCollectionViewController: UICollectionViewController{
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath : IndexPath)
     {
         NSLog("You selected cell #\(indexPath.item)")
-        
-        
-        ///Set the individual item state so we can track what the user is up to across
-        ///all of the samples
-        jokeCollectionView.reloadItems(at: [indexPath] as [IndexPath])
+        let joke = self.jokes.jokes[indexPath.row]
+        delegate?.didSelectJokeItem(joke)
+       
         
     }
     

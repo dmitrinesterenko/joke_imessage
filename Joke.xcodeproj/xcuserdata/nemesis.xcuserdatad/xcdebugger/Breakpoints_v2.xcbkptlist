@@ -9,54 +9,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Joke MessagesExtension/Models/Jokes.swift"
-            timestampString = "565479246.732672"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "getJokes(updateUI:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Joke_MessagesExtension.Jokes.getJokes(updateUI: () -&gt; ()) -&gt; ()"
-                  moduleName = "Joke MessagesExtension"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nemesis/Code/iOS/BadumCha/BadumCha/Joke%20MessagesExtension/Models/Jokes.swift"
-                  timestampString = "565479246.900463"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "45"
-                  endingLineNumber = "45"
-                  offsetFromSymbolStart = "2156">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Joke_MessagesExtension.Jokes.getJokes(updateUI: () -&gt; ()) -&gt; ()"
-                  moduleName = "Joke MessagesExtension"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nemesis/Code/iOS/BadumCha/BadumCha/Joke%20MessagesExtension/Models/Jokes.swift"
-                  timestampString = "565479246.903208"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "48"
-                  endingLineNumber = "48"
-                  offsetFromSymbolStart = "24">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Joke MessagesExtension/JokesViewController.swift"
             timestampString = "565479246.732829"
             startingColumnNumber = "9223372036854775807"
@@ -90,60 +42,76 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Joke MessagesExtension/MessagesViewController.swift"
-            timestampString = "565479246.73298"
+            timestampString = "568499753.631175"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "bindData()"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "didSelectJokeItem(_:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Joke_MessagesExtension.MessagesViewController.didSelectJokeItem(Swift.String) -&gt; ()"
+                  moduleName = "Joke MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nemesis/Code/iOS/iMessageExtensions/Joke/Joke%20MessagesExtension/MessagesViewController.swift"
+                  timestampString = "568499753.656479"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "682">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Joke_MessagesExtension.MessagesViewController.didSelectJokeItem(Swift.String) -&gt; ()"
+                  moduleName = "Joke MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nemesis/Code/iOS/iMessageExtensions/Joke/Joke%20MessagesExtension/MessagesViewController.swift"
+                  timestampString = "568499753.660642"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "33">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Joke MessagesExtension/MessagesViewController.swift"
-            timestampString = "565479246.733047"
+            filePath = "Joke MessagesExtension/JokesCollectionViewController.swift"
+            timestampString = "568499753.63167"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "collectionView(_:cellForItemAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Joke MessagesExtension/MessagesViewController.swift"
-            timestampString = "565479246.73311"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "collectionView(_:numberOfItemsInSection:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Joke MessagesExtension/MessagesViewController.swift"
-            timestampString = "565479246.733174"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "collectionView(_:didSelectItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Joke MessagesExtension/MessagesViewController.swift"
+            timestampString = "568499753.6317379"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "didSelectJokeItem(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

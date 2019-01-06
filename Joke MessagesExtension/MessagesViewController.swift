@@ -9,6 +9,26 @@
 import UIKit
 import Messages
 
+// TODO: move this to a different file
+extension MessagesViewController: JokesCollectionViewControllerDelegate{
+    func didSelectJokeItem(_ item: String){
+        NSLog(item)
+        //populate the text messages text with the joke
+        guard let conversation = activeConversation else { fatalError("Expected a conversation") }
+        
+        guard let message = composeMessage(with: item, session: (conversation.selectedMessage?.session)!) else { return }
+        
+        conversation.insert(message) { error in
+            if let error = error{
+                NSLog("Error occured \(error.localizedDescription)")
+            }
+        }
+        // TODO: not sure if I need this if I'm not using expanded view
+        
+        dismiss()
+        
+    }
+}
 class MessagesViewController: MSMessagesAppViewController {
 
     var jokesCollectionViewController: JokesCollectionViewController!
@@ -24,8 +44,32 @@ class MessagesViewController: MSMessagesAppViewController {
         self.present(jokesCollectionViewController, animated: true, completion: nil)
     }
     
-   
     // MARK: - Conversation Handling
+    
+    // TODO: if the delegate implementation will move to a different file then this can no longer be fileprivate
+    fileprivate func composeMessage(with joke: String, session: MSSession) -> MSMessage? {
+        var components = URLComponents()
+        
+        let caption = URLQueryItem(name: "caption", value: joke)
+        // Note: if joke is a complex object (includes images, etc.) then it will have to be parsed out into individual components from the class properties
+        
+        let layout = MSMessageTemplateLayout()
+        // Note: can be use layout.image
+        
+        components.queryItems = [caption]
+        
+        let message = MSMessage(session: session ?? MSSession())
+        
+        if let conversation = activeConversation,
+            let msg = conversation.selectedMessage{
+                layout.caption = "$\(msg.senderParticipantIdentifier.uuidString) send you a joke!"
+        }
+        
+        message.url = components.url!
+        message.layout = layout
+        
+        return message
+    }
     
     override func willBecomeActive(with conversation: MSConversation) {
         // Called when the extension is about to move from the inactive to active state.
